@@ -24,6 +24,29 @@
       <p id="error-message" class="error-message" role="alert" hidden></p>
     </main>
 
+    <section id="ai-chat" class="ai-chat" aria-label="AI command chat">
+      <button id="chat-toggle" class="chat-toggle" type="button" aria-label="Open AI command chat" aria-expanded="false">
+        <span aria-hidden="true">&#128172;</span>
+      </button>
+
+      <div id="chat-panel" class="chat-panel" hidden>
+        <div class="chat-header">
+          <div class="chat-avatar" aria-hidden="true">&#129302;</div>
+          <div>
+            <h2>Robot AI</h2>
+            <p>Claw command console</p>
+          </div>
+        </div>
+
+        <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+
+        <form id="chat-form" class="chat-form">
+          <input id="chat-input" type="text" autocomplete="off" placeholder="Type a command..." aria-label="AI chat command">
+          <button type="submit" aria-label="Send command">Send</button>
+        </form>
+      </div>
+    </section>
+
     <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>
 </html>
