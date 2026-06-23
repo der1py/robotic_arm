@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Servo Controller</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <div>
+          <p class="eyebrow">Arduino control panel</p>
+          <h1>Servo Controller</h1>
+          <p class="subtitle">Adjust four servo angles over USB serial.</p>
+        </div>
+        <div id="status" class="status status-offline" role="status" aria-live="polite">
+          <span class="status-dot"></span>
+          <span id="status-text">Not connected</span>
+        </div>
+      </header>
+
+      <section id="servo-controls" class="servo-grid" aria-label="Servo controls"></section>
+      <p id="error-message" class="error-message" role="alert" hidden></p>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
